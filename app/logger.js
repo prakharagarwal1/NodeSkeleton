@@ -2,8 +2,8 @@ const winston = require("winston");
 const winstonDailyRotateFile = require("winston-daily-rotate-file");
 const path = require("path");
 
-// Directory where logs are stored
-const logDir = path.join(__dirname, "..", "logs");
+// Directory where logs are stored. LOG_DIR allows deployment-specific overrides.
+const logDir = process.env.LOG_DIR || path.join(__dirname, "logs");
 
 const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || "info",
