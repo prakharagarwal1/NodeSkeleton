@@ -1,0 +1,36 @@
+# Git / CI
+.git/
+.gitignore
+.github/
+.gitlab-ci.yml
+
+# Node modules (recreated inside image via npm ci)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Local environment & secrets
+.env
+.env.*
+!.env.example
+
+# Tests / coverage
+coverage/
+.nyc_output/
+tests/
+*.test.js
+*.spec.js
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+Dockerfile
+docker-compose.yml
+.dockerignore
